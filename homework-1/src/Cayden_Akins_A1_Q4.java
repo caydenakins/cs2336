@@ -71,6 +71,23 @@ public class Cayden_Akins_A1_Q4 {
     averageSpeed = (speed1974 + speed1975 + speed1978 + speed1979
         + speed2013) / 5;
 
+    // Assign strings so we can use `System.out.format()` to have a table
+    // that is width-adjusting and will be correct regardless of values
+    String distance1974 = distanceSwam1974 + " miles";
+    String distance1975 = distanceSwam1975 + " miles";
+    String distance1978 = distanceSwam1978 + " miles";
+    String distance1979 = distanceSwam1979 + " miles";
+    String distance2013 = distanceSwam2013 + " miles";
+    String time1974 = hoursSwam1974 + " hours";
+    String time1975 = hoursSwam1975 + " hours";
+    String time1978 = hoursSwam1978 + " hours";
+    String time1979 = hoursSwam1979 + " hours";
+    String time2013 = hoursSwam2013 + " hours";
+    String strSpeed1974 = "" + speed1974;
+    String strSpeed1975 = "" + speed1975;
+    String strSpeed1978 = "" + speed1978;
+    String strSpeed1979 = "" + speed1979;
+    String strSpeed2013 = "" + speed2013;
 
     // Print the output in a tabular format
     System.out.println("+-----------------------------------------------------"
@@ -79,21 +96,19 @@ public class Cayden_Akins_A1_Q4 {
         + "iles/hour)  |");
     System.out.println("+-----------------------------------------------------"
         + "------------+");
-    System.out.println("  1974   | " + distanceSwam1974
-        + " miles          | " + hoursSwam1974
-        + " hours      | " + speed1974);
-    System.out.println("  1975   | " + distanceSwam1975
-        + " miles          | " + hoursSwam1975
-        + " hours      | " + speed1975);
-    System.out.println("  1978   | " + distanceSwam1978
-        + " miles          | " + hoursSwam1978
-        + " hours     | " + speed1978);
-    System.out.println("  1979   | " + distanceSwam1979
-        + " miles         | " + hoursSwam1979
-        + " hours     | " + speed1979);
-    System.out.println("  2013   | " + distanceSwam2013
-        + " miles         | " + hoursSwam2013
-        + " hours     | " + speed2013);
+
+    // I combined the units and values into one string for column formatting
+    // e.x. `distance1974 = distanceSwam1974 + " miles"`
+    System.out.format("  %-7d| %-18s| %-13s| %s%n", 1974, distance1974,
+        time1974, strSpeed1974);
+    System.out.format("  %-7d| %-18s| %-13s| %s%n", 1975, distance1975,
+        time1975, strSpeed1975);
+    System.out.format("  %-7d| %-18s| %-13s| %s%n", 1978, distance1978,
+        time1978, strSpeed1978);
+    System.out.format("  %-7d| %-18s| %-13s| %s%n", 1979, distance1979,
+        time1979, strSpeed1979);
+    System.out.format("  %-7d| %-18s| %-13s| %s%n", 2013, distance2013,
+        time2013, strSpeed2013);
 
     System.out.println();
 
